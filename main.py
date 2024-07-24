@@ -11,7 +11,7 @@ tri(rows)# 呼叫tri函式，並傳遞rows作為參數
 
 
 # 作業2 99乘法表
-def multiplication_table():
+def ninenine():
     i = 1  
     while i <= 9:  # 當i<=9時執行while迴圈
         j = 1  
@@ -20,9 +20,11 @@ def multiplication_table():
          
             print(f"{i} * {j} = {result}", end="  " if result < 10 else " ")# 如果結果是一位數，後面加兩個空格，如果是兩位數，後面加一個空格
             j += 1  # j+1
-        print()  # 內層迴圈結束後換行，開始新的一行的乘法表
+        print()  # 換行
         i += 1  # i+1
 
 # 呼叫函式來打印乘法表
-multiplication_table()
+ninenine()
 
+# 作業3 輸入一個數字，會顯示0~該數字之間所有質數的數量，還有把所有質數列出來
+n=int (input("input a number:"))
