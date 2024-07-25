@@ -31,10 +31,13 @@ n=int (input("input a number:"))
 prime = [True]*(n+1) # 先列出0到n+1的數字
 prime[0] = False # 0跟1都不是質數先刪掉
 prime[1] = False
-
+number=0
 for i in range(2,n+1):
     if prime[i]==True:   # 如果i是質數，就印出來
         print(i)
+        number=number+1
         for j in range(2*i,n+1,i):  # 把i的倍數全部去除
             prime[j]=False
+
+print("質數的數量:",number)
 
