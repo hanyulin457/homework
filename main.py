@@ -28,3 +28,13 @@ ninenine()
 
 # 作業3 輸入一個數字，會顯示0~該數字之間所有質數的數量，還有把所有質數列出來
 n=int (input("input a number:"))
+prime = [True]*(n+1)
+prime[0] = False
+prime[1] = False
+
+for i in range(2,n+1):
+    if prime[i]:
+        print(i)
+        for j in range(2*i,n+1,i):
+            prime[j]=False
+
